@@ -42,12 +42,12 @@ jobs:
         with:
           terraform_version: ${{ matrix.version }}
 
-#    - id: 'auth'
-#        name: 'Authenticate to Google Cloud'
-#        uses: 'google-github-actions/auth@v1'
-#        with:
-#          workload_identity_provider: 'clouddrove/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
-#          service_account: 'my-service-account@my-project.iam.gserviceaccount.com'
+      - name: Configure AWS Credentials
+        uses: clouddrove/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.TEST_AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.TEST_AWS_ACCESS_SECRET_KEY }}
+          aws-region: us-east-2
 
       - name: Init & validate v${{ matrix.version }}
         run: |
