@@ -78,7 +78,8 @@ This module has a few dependencies:
 Here is an example of how you can use this module in your inventory structure:
 ```hcl
     module "label" {
-          source      = "clouddrove/labels/aws"
+          source      = "clouddrove/labels/google"
+          version     = "1.0.0"
           name        = "labels"
           environment = "prod"
           managedby   = "hello@clouddrove.com"
