@@ -4,7 +4,7 @@
 
 
 <h1 align="center">
-    Terraform gcp storage
+    Terraform gcp labels
 </h1>
 
 <p align="center" style="font-size: 1.2rem;"> 
@@ -30,13 +30,13 @@
 </p>
 <p align="center">
 
-<a href='https://facebook.com/sharer/sharer.php?u=https://github.com/clouddrove/terraform-gcp-storage'>
+<a href='https://facebook.com/sharer/sharer.php?u=https://github.com/clouddrove/terraform-gcp-labels'>
   <img title="Share on Facebook" src="https://user-images.githubusercontent.com/50652676/62817743-4f64cb80-bb59-11e9-90c7-b057252ded50.png" />
 </a>
-<a href='https://www.linkedin.com/shareArticle?mini=true&title=Terraform+gcp+storage&url=https://github.com/clouddrove/terraform-gcp-storage'>
+<a href='https://www.linkedin.com/shareArticle?mini=true&title=Terraform+gcp+labels&url=https://github.com/clouddrove/terraform-gcp-labels'>
   <img title="Share on LinkedIn" src="https://user-images.githubusercontent.com/50652676/62817742-4e339e80-bb59-11e9-87b9-a1f68cae1049.png" />
 </a>
-<a href='https://twitter.com/intent/tweet/?text=Terraform+gcp+storage&url=https://github.com/clouddrove/terraform-gcp-storage'>
+<a href='https://twitter.com/intent/tweet/?text=Terraform+gcp+labels&url=https://github.com/clouddrove/terraform-gcp-labels'>
   <img title="Share on Twitter" src="https://user-images.githubusercontent.com/50652676/62817740-4c69db00-bb59-11e9-8a79-3580fbbf6d5c.png" />
 </a>
 
@@ -71,14 +71,14 @@ This module has a few dependencies:
 ## Examples
 
 
-**IMPORTANT:** Since the `master` branch used in `source` varies based on new modifications, we suggest that you use the release versions [here](https://github.com/clouddrove/terraform-gcp-storage/releases).
+**IMPORTANT:** Since the `master` branch used in `source` varies based on new modifications, we suggest that you use the release versions [here](https://github.com/clouddrove/terraform-gcp-labels/releases).
 
 
 ### Simple Example
 Here is an example of how you can use this module in your inventory structure:
 ```hcl
     module "label" {
-          source      = "git::https://github.com/clouddrove/terraform-labels.git?ref=tags/0.15.0"
+          source      = "clouddrove/labels/aws"
           name        = "labels"
           environment = "prod"
           managedby   = "hello@clouddrove.com"
@@ -86,7 +86,7 @@ Here is an example of how you can use this module in your inventory structure:
           label_order = ["name","attributes","environment"]
           delimiter   = "-"
       tags = {
-          "Terraform Version"   = ""
+          "Terraform Version"   = "1.0.1"
           "created_date"        = "23-nov-22"
       }
    }
@@ -137,9 +137,9 @@ You need to run the following command in the testing folder:
 
 
 ## Feedback 
-If you come accross a bug or have any feedback, please log it in our [issue tracker](https://github.com/clouddrove/terraform-gcp-storage/issues), or feel free to drop us an email at [hello@clouddrove.com](mailto:hello@clouddrove.com).
+If you come accross a bug or have any feedback, please log it in our [issue tracker](https://github.com/clouddrove/terraform-gcp-labels/issues), or feel free to drop us an email at [hello@clouddrove.com](mailto:hello@clouddrove.com).
 
-If you have found it worth your time, go ahead and give us a ★ on [our GitHub](https://github.com/clouddrove/terraform-gcp-storage)!
+If you have found it worth your time, go ahead and give us a ★ on [our GitHub](https://github.com/clouddrove/terraform-gcp-labels)!
 
 ## About us
 
