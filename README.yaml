@@ -5,13 +5,13 @@
 #
 
 # Name of this project
-name : Terraform gcp storage
+name : Terraform gcp labels
 
 # License of this project
 license: "APACHE"
 
 # Canonical GitHub repo
-github_repo: clouddrove/terraform-gcp-storage
+github_repo: clouddrove/terraform-gcp-labels
 
 # Badges to display
 badges:
