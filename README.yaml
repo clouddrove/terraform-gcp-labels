@@ -43,7 +43,7 @@ usage : |-
   Here is an example of how you can use this module in your inventory structure:
   ```hcl
       module "label" {
-            source      = "git::https://github.com/clouddrove/terraform-labels.git?ref=tags/0.15.0"
+            source      = "clouddrove/labels/aws"
             name        = "labels"
             environment = "prod"
             managedby   = "hello@clouddrove.com"
@@ -51,7 +51,7 @@ usage : |-
             label_order = ["name","attributes","environment"]
             delimiter   = "-"
         tags = {
-            "Terraform Version"   = ""
+            "Terraform Version"   = "1.0.1"
             "created_date"        = "23-nov-22"
         }
      }
