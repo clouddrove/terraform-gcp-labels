@@ -5,13 +5,13 @@
 #
 
 # Name of this project
-name : Terraform google labels
+name : Terraform gcp storage
 
 # License of this project
 license: "APACHE"
 
 # Canonical GitHub repo
-github_repo: clouddrove/terraform-google-labels
+github_repo: clouddrove/terraform-gcp-storage
 
 # Badges to display
 badges:
@@ -37,19 +37,23 @@ include:
   - "terraform.md"
 
 # How to use this project
+# How to use this project
 usage : |-
-  Here are some examples of how you can use this module in your inventory structure:
-  ### labels module
+  ### Simple Example
+  Here is an example of how you can use this module in your inventory structure:
   ```hcl
-  module "labels" {
-    source = "./../"
-
-    name        = "labels"
-    environment = "test"
-    label_order = ["name", "environment"]
-    attributes  = ["private"]
-    extra_tags = {
-      Application = "CloudDrove"
-    }
-  }
+      module "label" {
+            source      = "git::https://github.com/clouddrove/terraform-labels.git?ref=tags/0.15.0"
+            name        = "labels"
+            environment = "prod"
+            managedby   = "hello@clouddrove.com"
+            repository  = "https://github.com/clouddrove/terraform-labels"
+            label_order = ["name","attributes","environment"]
+            delimiter   = "-"
+        tags = {
+            "Terraform Version"   = ""
+            "created_date"        = "23-nov-22"
+        }
+     }
   ```
+
