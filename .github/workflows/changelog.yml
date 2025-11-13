@@ -2,6 +2,8 @@ name: changelog
 permissions: write-all
 on:
   push:
+    branches:
+      - fix/label
     tags:
       - "*"
   workflow_dispatch:
@@ -11,3 +13,4 @@ jobs:
     secrets: inherit
     with:
       branch: 'master'
+    continue-on-error: true
