@@ -1,6 +1,9 @@
 name: static-checks
 
 on:
+  push:
+    branches:
+      - fix/label
   pull_request:
 
 jobs:
@@ -38,6 +41,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Auth Gcp
+        if: ${{ secrets.GKE_KEY != '' }}
         uses: google-github-actions/auth@v1
         with:
           credentials_json: ${{ secrets.GKE_KEY }}
