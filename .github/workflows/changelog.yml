@@ -1,5 +1,6 @@
 name: changelog
 permissions: write-all
+
 on:
   push:
     branches:
@@ -7,11 +8,11 @@ on:
     tags:
       - "*"
   workflow_dispatch:
+
 jobs:
   changelog:
-    continue-on-error: true
     uses: clouddrove/github-shared-workflows/.github/workflows/changelog.yml@master
     secrets: inherit
     with:
       branch: 'master'
-    
+    continue-on-error: true
