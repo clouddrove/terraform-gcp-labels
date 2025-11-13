@@ -1,9 +1,6 @@
 name: static-checks
 
 on:
-  push:
-    branches:
-      - fix/label
   pull_request:
 
 jobs:
