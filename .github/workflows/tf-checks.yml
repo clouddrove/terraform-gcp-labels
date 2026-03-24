@@ -10,4 +10,4 @@ jobs:
     with:
       provider: none
       enable_version_check: true
-      working_directory: './_examples/' 
+      working_directory: './examples/' 
